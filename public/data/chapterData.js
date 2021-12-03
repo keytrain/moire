@@ -1,6 +1,34 @@
 window.chapterData = {
   series: {
     "Coffee Moon": {
+      18: {
+        date: new Date("Nov 23 2021 9:27:00 GMT-0800"),
+        src: "/img/releases/cm/18",
+        trans: "nex",
+        let: "myran",
+        red: "myran",
+      },
+      17: {
+        date: new Date("Oct 10 2021 22:14:00 GMT-0800"),
+        src: "/img/releases/cm/17",
+        trans: "nex",
+        let: "myran",
+        red: "myran",
+      },
+      16: {
+        date: new Date("Aug 15 2021 19:11:00 GMT-0800"),
+        src: "/img/releases/cm/16",
+        trans: "nex",
+        let: "myran",
+        red: "myran",
+      },
+      15: {
+        date: new Date("June 19 2021 20:07:00 GMT-0800"),
+        src: "/img/releases/cm/15",
+        trans: "nex",
+        let: "myran",
+        red: "myran",
+      },
       14: {
         date: new Date("April 10 2021 22:40:00 GMT-0800"),
         src: "/img/releases/cm/14",
@@ -88,6 +116,49 @@ window.chapterData = {
       },
     },
     "The End of the Journey": {
+      11: {
+        date: new Date("December 3 2021 9:23:00 GMT-0800"),
+        src: "/img/releases/teotj/11",
+        trans: "nex",
+        let: "nielle",
+        red: "myran, key",
+        pgCount: 32,
+      },
+      10: {
+        date: new Date("November 5 2021 10:05:00 GMT-0700"),
+        src: "/img/releases/teotj/10",
+        trans: "nex",
+        let: "nielle",
+        red: "myran, key",
+      },
+      9: {
+        date: new Date("September 12 2021 14:48:00 GMT-0700"),
+        src: "/img/releases/teotj/9",
+        trans: "nex",
+        let: "nielle",
+        red: "myran",
+      },
+      8: {
+        date: new Date("August 20 2021 12:05:00 GMT-0800"),
+        src: "/img/releases/teotj/8",
+        trans: "nex",
+        let: "nielle",
+        red: "key, myran",
+      },
+      7: {
+        date: new Date("June 9 2021 11:08:00 GMT-0800"),
+        src: "/img/releases/teotj/7",
+        trans: "nex",
+        let: "nielle",
+        red: "key",
+      },
+      6: {
+        date: new Date("May 2 2021 22:33:00 GMT-0800"),
+        src: "/img/releases/teotj/6",
+        trans: "nex",
+        let: "myran",
+        red: "key",
+      },
       5: {
         date: new Date("March 23 2021 21:43:00 GMT-0800"),
         src: "/img/releases/teotj/5",

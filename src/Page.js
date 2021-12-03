@@ -87,7 +87,7 @@ class Page extends React.Component {
               src={this.props.src}
               alt={this.props.alt}
               ref={(img) => (this.img = img)}
-              onClick={this.props.click}
+              onClick={state === 'entered' ? this.props.click : () => { }}
               onLoad={this.handleImageLoaded}
               onError={this.handleImageError}
             />

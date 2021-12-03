@@ -28,6 +28,11 @@ import "./Reader.css";
 // load all pages at once/vertical scroll webcomic style/load as you scroll
 // svg the logo
 
+
+const MOBILE = 425;
+const TABLET = 1024;
+const DESKTOP = 1440;
+
 class Reader extends React.Component {
   constructor(props) {
     super(props);
@@ -35,9 +40,6 @@ class Reader extends React.Component {
     this.selection = this.props.match.params.series;
     this.chapter = this.props.match.params.chapter;
     this.cData = window.chapterData;
-    this.MOBILE = 425;
-    this.TABLET = 1024;
-    this.DESKTOP = 1440;
 
     this.state = {
       pageMode: localStorage.getItem("pageMode") ? localStorage.getItem("pageMode") : "Double Page",
@@ -51,7 +53,7 @@ class Reader extends React.Component {
       rightShow: false,
       spread: false,
       goBack: false,
-      lastPg: 1000,
+      lastPg: this.cData.series[this.selection][this.chapter].pgCount ? this.cData.series[this.selection][this.chapter].pgCount + 1 : 1000,
       showDisqus: false,
       showInfo: false,
       firstLoad: false,
@@ -61,7 +63,7 @@ class Reader extends React.Component {
       },
       singlePgMode:
         localStorage.getItem("pageMode") === "Single Page" ||
-        document.documentElement.clientWidth <= this.MOBILE
+          document.documentElement.clientWidth <= MOBILE
           ? true
           : false,
       windowWidth: document.documentElement.clientWidth,
@@ -106,28 +108,7 @@ class Reader extends React.Component {
       : {};
     let currPg = this.props.match.params.page;
 
-    // const duration = 150;
-    // const defaultStyle = {
-    //   transition: `${duration}ms cubic-bezier(0.4, 0.0, 0.6, 1)`,
-    // }
-    // let transitionStyles = {
-    //   entering: {
-    //     visibility:'visible',
-    //     transform: 'translateX(0%)',
-    //   },
-    //   entered: {
-    //     visibility:'visible',
-    //     transform: 'translateX(0%)',
-    //   },
-    //   exiting: {
-    //     transform: 'translateX(-100%)',
-    //   },
-    //   exited: {
-    //     transform: 'translateX(-100%)',
-    //   }
-    // }
-
-    let actionIconSize = this.state.windowWidth > this.MOBILE ? 24 : 18;
+    let actionIconSize = this.state.windowWidth > MOBILE ? 24 : 18;
 
     // Scroll back to the top of the page before anything is rendered
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -137,15 +118,6 @@ class Reader extends React.Component {
         <div className="reader">
           <div className="controls">
             <div className="ctrl-left">
-              {/* {this.state.windowWidth > this.TABLET &&
-              <div>
-                {this.state.showDisqus ?
-                <MdChat className='action-icon' onClick={this.handleDisqus} size={actionIconSize} />
-                :
-                <MdChatBubbleOutline className='action-icon' onClick={this.handleDisqus} size={actionIconSize} />
-                }
-              </div>
-              } */}
             </div>
             <div className="ctrl-center">
               <div className="ctrl-title">
@@ -212,24 +184,6 @@ class Reader extends React.Component {
             )}
           </div>
 
-          {/* {(this.state.firstLoad && this.state.windowWidth > this.TABLET) &&
-          <Transition in={this.state.showDisqus} timeout={duration}>
-            {(state) => (
-            <div style={{
-                ...defaultStyle,
-                ...transitionStyles[state]
-              }} className='disqus-container'>
-              <div className='disqus'>
-                <ReactDisqusComments shortname='maigo4'
-                  identifier={encodeURI(`https://maigo.us/#/r/${this.selection}/${this.chapter}`)}
-                  url={encodeURI(`https://maigo.us/#/r/${this.selection}/${this.chapter}`)}
-                  title={`${this.selection} - ${this.chapter}`} />
-              </div>
-            </div>
-            )}
-          </Transition>
-          } */}
-
           <div className="pages-container" style={this.state.pageStyle}>
             <div className="pages">
               {!this.state.spread &&
@@ -277,26 +231,6 @@ class Reader extends React.Component {
             </div>
           </div>
         </div>
-
-        {/* {this.state.windowWidth <= this.TABLET &&
-          <div>
-            {!this.state.showDisqus &&
-            <div className='disqus-container' onClick={this.handleDisqus}>
-              <button>Show Comments</button>
-            </div>
-            }
-            {this.state.showDisqus &&
-            <div className='disqus-container'>
-              <div className='disqus'>
-              <ReactDisqusComments shortname='maigo4'
-                identifier={encodeURI(`https://maigo.us/#/r/${this.selection}/${this.chapter}`)}
-                url={encodeURI(`https://maigo.us/#/r/${this.selection}/${this.chapter}`)}
-                title={`${this.selection} - ${this.chapter}`} />
-              </div>
-            </div>
-            }
-          </div>
-        } */}
       </div>
     );
   }
@@ -310,14 +244,14 @@ class Reader extends React.Component {
     this.setState((prevState) => {
       let currWidth = document.documentElement.clientWidth;
       prevState.windowWidth = currWidth;
-      if (currWidth > this.DESKTOP && prevState.showDisqus) {
+      if (currWidth > DESKTOP && prevState.showDisqus) {
         prevState.pageStyle.marginLeft = "400px";
         prevState.pageStyle.transition = "150ms cubic-bezier(0.4, 0.0, 0.6, 1)";
       }
-      if (currWidth <= this.DESKTOP) {
+      if (currWidth <= DESKTOP) {
         prevState.pageStyle.marginLeft = "0";
       }
-      if (currWidth <= this.MOBILE) {
+      if (currWidth <= MOBILE) {
         prevState.singlePgMode = true;
       }
       if (prevState.singlePgMode && this.props.match.params.page === "0") {
@@ -338,9 +272,6 @@ class Reader extends React.Component {
       case "Escape":
         this.props.history.push(`/r/${this.selection}`);
         break;
-      // case 'c':
-      //   this.handleDisqus();
-      //   break;
       default:
         break;
     }
@@ -359,10 +290,6 @@ class Reader extends React.Component {
       prevState.spread = false;
     });
     this.loadPagesTimeout = setTimeout(() => {
-      // document.documentElement.style.overflow = 'scroll';
-      // document.body.style.overflow = 'scroll';
-      // document.documentElement.style.overflow = 'visible';
-      // document.body.style.overflow = 'visible';
       this.setState((prevState) => {
         prevState.rightShow = true;
         prevState.leftShow = true;
@@ -377,26 +304,29 @@ class Reader extends React.Component {
     let chapterObj = this.cData.series[this.selection]
       ? this.cData.series[this.selection][this.chapter]
       : {};
-    let originPg = this.state.leftPgCount;
-
+    let startPg = Number(this.state.leftPgCount);
+    let errorCount = 0;
     for (let i = 0; i < size; i++) {
-      let pageNum = Number(originPg) + i + 1;
-      // if (pageNum < this.state.lastPg) {
+      let pageNum = startPg + i + 1;
       const bufferImg = new Image();
       let nextPg = genLib.padZero("" + pageNum);
       let bufferImgType = "png";
-      bufferImg.onerror = function () {
+      bufferImg.onerror = () => {
         if (bufferImgType === "jpg") {
           bufferImgType = "jpeg";
           bufferImg.src = `${chapterObj.src}/${nextPg}.${bufferImgType}`;
         } else if (bufferImgType === "png") {
           bufferImgType = "jpg";
           bufferImg.src = `${chapterObj.src}/${nextPg}.${bufferImgType}`;
+        } else {
+          errorCount++;
+        }
+        if (this.state.lastPg === 1000 && errorCount === 2) {
+          this.setState({ lastPg: pageNum - errorCount + 1 })
         }
       };
       bufferImg.src = `${chapterObj.src}/${nextPg}.${bufferImgType}`;
     }
-    // }
   };
 
   handleSpread = (imgObj) => {
@@ -432,7 +362,7 @@ class Reader extends React.Component {
 
   handleRightLoaded = () => {
     // console.log('right')
-    document.addEventListener("keydown", this.handlePagesKey);
+    setTimeout(() => document.addEventListener("keydown", this.handlePagesKey), 700);
   };
 
   handleLeftError = () => {
@@ -496,21 +426,6 @@ class Reader extends React.Component {
       }
     }
   };
-
-  // handleDisqus = () => {
-  //   this.setState((prevState) => {
-  //     prevState.firstLoad = true;
-  //     prevState.showDisqus = (prevState.showDisqus === false ? true : false);
-  //     if (prevState.windowWidth <= this.DESKTOP)
-  //       prevState.pageStyle = {marginLeft: '0'};
-  //     else {
-  //       prevState.pageStyle = {
-  //         marginLeft: (prevState.pageStyle.marginLeft === '400px' ? '0' : '400px'),
-  //         transition: '150ms cubic-bezier(0.4, 0.0, 0.6, 1)'
-  //       }
-  //     }
-  //   });
-  // }
 
   handleInfo = () => {
     this.setState((prevState) => {
