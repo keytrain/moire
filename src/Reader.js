@@ -28,7 +28,6 @@ import "./Reader.css";
 // load all pages at once/vertical scroll webcomic style/load as you scroll
 // svg the logo
 
-
 const MOBILE = 425;
 const TABLET = 1024;
 const DESKTOP = 1440;
@@ -53,7 +52,9 @@ class Reader extends React.Component {
       rightShow: false,
       spread: false,
       goBack: false,
-      lastPg: this.cData.series[this.selection][this.chapter].pgCount ? this.cData.series[this.selection][this.chapter].pgCount + 1 : 1000,
+      lastPg: this.cData.series[this.selection][this.chapter].pgCount
+        ? this.cData.series[this.selection][this.chapter].pgCount + 1
+        : 1000,
       showDisqus: false,
       showInfo: false,
       firstLoad: false,
@@ -63,7 +64,7 @@ class Reader extends React.Component {
       },
       singlePgMode:
         localStorage.getItem("pageMode") === "Single Page" ||
-          document.documentElement.clientWidth <= MOBILE
+        document.documentElement.clientWidth <= MOBILE
           ? true
           : false,
       windowWidth: document.documentElement.clientWidth,
@@ -117,8 +118,7 @@ class Reader extends React.Component {
       <div className="reader-container" tabIndex="0">
         <div className="reader">
           <div className="controls">
-            <div className="ctrl-left">
-            </div>
+            <div className="ctrl-left"></div>
             <div className="ctrl-center">
               <div className="ctrl-title">
                 <strong>{this.selection}</strong> - {this.chapter}
@@ -244,12 +244,8 @@ class Reader extends React.Component {
     this.setState((prevState) => {
       let currWidth = document.documentElement.clientWidth;
       prevState.windowWidth = currWidth;
-      if (currWidth > DESKTOP && prevState.showDisqus) {
-        prevState.pageStyle.marginLeft = "400px";
-        prevState.pageStyle.transition = "150ms cubic-bezier(0.4, 0.0, 0.6, 1)";
-      }
       if (currWidth <= DESKTOP) {
-        prevState.pageStyle.marginLeft = "0";
+        prevState.pageStyle = { ...prevState.pageStyle, marginLeft: "0" };
       }
       if (currWidth <= MOBILE) {
         prevState.singlePgMode = true;
@@ -257,6 +253,7 @@ class Reader extends React.Component {
       if (prevState.singlePgMode && this.props.match.params.page === "0") {
         this.resetChapterToStart();
       }
+      return prevState;
     });
   };
 
@@ -288,7 +285,9 @@ class Reader extends React.Component {
       prevState.rightWidth = 0;
       prevState.leftShow = false;
       prevState.spread = false;
+      return prevState;
     });
+
     this.loadPagesTimeout = setTimeout(() => {
       this.setState((prevState) => {
         prevState.rightShow = true;
@@ -296,6 +295,7 @@ class Reader extends React.Component {
         if (!prevState.goBack) {
           this.buffer(4);
         }
+        return prevState;
       });
     }, 400);
   };
@@ -322,7 +322,7 @@ class Reader extends React.Component {
           errorCount++;
         }
         if (this.state.lastPg === 1000 && errorCount === 2) {
-          this.setState({ lastPg: pageNum - errorCount + 1 })
+          this.setState({ lastPg: pageNum - errorCount + 1 });
         }
       };
       bufferImg.src = `${chapterObj.src}/${nextPg}.${bufferImgType}`;
@@ -353,6 +353,7 @@ class Reader extends React.Component {
           prevState.lastPg = Number(prevState.leftPgCount) - (this.state.singlePgMode ? 1 : 0);
         }
       }
+      return prevState;
     });
   };
 
@@ -430,6 +431,7 @@ class Reader extends React.Component {
   handleInfo = () => {
     this.setState((prevState) => {
       prevState.showInfo = prevState.showInfo === false ? true : false;
+      return prevState;
     });
   };
 
@@ -447,6 +449,7 @@ class Reader extends React.Component {
       } else {
         prevState.singlePgMode = false;
       }
+      return prevState;
     });
   };
 }

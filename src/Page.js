@@ -1,101 +1,86 @@
-import React from "react";
-// import Image from './Image';
-import Transition from "react-transition-group/Transition";
+import React, { useEffect, useRef } from "react";
+import { Transition } from "react-transition-group";
 
-class Page extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+function Page({
+  loaded,
+  error,
+  imgWidth,
+  spread,
+  singlePgMode,
+  imgClass,
+  src,
+  alt,
+  containerClass,
+  show,
+  click,
+}) {
+  const imgRef = useRef(null);
 
-    this.handleImageError = this.handleImageError.bind(this);
-    this.handleImageLoaded = this.handleImageLoaded.bind(this);
-
-    this.checkSpread = this.checkSpread.bind(this);
-  }
-
-  handleImageLoaded() {
-    if (typeof this.props.loaded === "function") {
-      this.props.loaded();
-    }
-  }
-
-  handleImageError() {
-    if (typeof this.props.error === "function") {
-      this.props.error();
-    }
-  }
-
-  checkSpread() {
+  useEffect(() => {
     // if i've nabbed the width already, don't run this again
-    if (this.props.imgWidth === 0) {
+    if (imgClass === "rightPg" && !singlePgMode && imgWidth === 0) {
       let checkSpread = setInterval(() => {
-        if (this.img === null) {
+        if (imgRef.current === null) {
           clearInterval(checkSpread);
-        } else if (this.img.naturalWidth !== 0 || this.img.complete) {
+        } else if (imgRef.current.naturalWidth !== 0 || imgRef.current.complete) {
           // naturalWidth is 0 when image metadata hasn't loaded yet
-          if (this.img.naturalWidth > 1300) {
-            this.props.spread({ spread: true, width: this.img.naturalWidth });
+          if (imgRef.current.naturalWidth > 1300) {
+            spread({ spread: true, width: imgRef.current.naturalWidth });
           } else {
-            this.props.spread({ spread: false, width: this.img.naturalWidth });
+            spread({ spread: false, width: imgRef.current.naturalWidth });
           }
           clearInterval(checkSpread);
         }
       }, 100);
     }
-  }
+  });
 
-  render() {
-    const container = {
-      position: "relative",
-      width: this.props.singlePgMode ? "100%" : "",
-    };
-    const duration = 180;
-    const defaultStyle = {
-      // opacity:0,
-      transition: `opacity ${duration}ms ease-out`,
-      verticalAlign: "top",
-    };
-    const transitionStyles = {
-      entering: {
-        opacity: 1,
-      },
-      entered: {
-        opacity: 1,
-      },
-      exiting: {
-        opacity: 0,
-      },
-      exited: {
-        opacity: 0,
-      },
-    };
+  const container = {
+    position: "relative",
+    width: singlePgMode ? "100%" : "",
+  };
+  const duration = 180;
+  const defaultStyle = {
+    // opacity:0,
+    transition: `opacity ${duration}ms ease-out`,
+    verticalAlign: "top",
+  };
+  const transitionStyles = {
+    entering: {
+      opacity: 1,
+    },
+    entered: {
+      opacity: 1,
+    },
+    exiting: {
+      opacity: 0,
+    },
+    exited: {
+      opacity: 0,
+    },
+  };
 
-    if (this.props.imgClass === "rightPg" && !this.props.singlePgMode) {
-      this.checkSpread();
-    }
-
-    return (
-      <div className={this.props.containerClass} style={container}>
-        <Transition in={this.props.show} timeout={duration} key={this.props.src}>
-          {(state) => (
-            <img
-              className={this.props.imgClass}
-              style={{
-                ...defaultStyle,
-                ...transitionStyles[state],
-              }}
-              src={this.props.src}
-              alt={this.props.alt}
-              ref={(img) => (this.img = img)}
-              onClick={state === 'entered' ? this.props.click : () => { }}
-              onLoad={this.handleImageLoaded}
-              onError={this.handleImageError}
-            />
-          )}
-        </Transition>
-      </div>
-    );
-  }
+  return (
+    <div className={containerClass} style={container}>
+      <Transition in={show} timeout={duration} key={src}>
+        {(state) => (
+          <img
+            className={imgClass}
+            style={{
+              ...defaultStyle,
+              ...transitionStyles[state],
+            }}
+            src={src}
+            alt={alt}
+            ref={imgRef}
+            onClick={state === "entered" ? click : () => {}}
+            onLoad={loaded}
+            onError={error}
+          />
+        )}
+      </Transition>
+    </div>
+  );
 }
 
 export default Page;

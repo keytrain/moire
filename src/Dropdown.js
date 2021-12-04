@@ -25,6 +25,7 @@ class Dropdown extends Component {
   handleClicked(e) {
     this.setState((prevState) => {
       prevState.open = prevState.open ? false : true;
+      return prevState;
     });
   }
 
