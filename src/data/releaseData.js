@@ -22,6 +22,7 @@ export default {
         chData.series["Coffee Moon"][
           sortChaps(Object.keys(chData.series["Coffee Moon"]))[0]
         ].date,
+      completed: false,
     },
     {
       cover: "img/cover/teotj.jpg",

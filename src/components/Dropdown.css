@@ -3,30 +3,27 @@
   position: relative;
   z-index: 1;
 }
-.container:hover {
-  cursor: pointer;
-}
 .container:focus {
   outline: none;
 }
 .menu-container {
   position: absolute;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 0.5rem 0;
   right: 0;
-  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.1);
 }
 .menu-contents {
   position: static;
   font-size: 0.9rem;
   text-align: left;
-  width: 11rem;
 }
 .menu-contents a {
   color: #222;
 }
 .dropdown-row {
+  width: 11.5rem;
   padding: 0.2rem 0rem;
 }
 .dropdown-row:hover {

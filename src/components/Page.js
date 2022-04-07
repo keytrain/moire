@@ -41,7 +41,7 @@ function Page({
   };
   const duration = 180;
   const defaultStyle = {
-    // opacity:0,
+    opacity: 1,
     transition: `opacity ${duration}ms ease-out`,
     verticalAlign: "top",
   };

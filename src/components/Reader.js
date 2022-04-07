@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import genLib from "./lib/generalLibrary";
 import MdClose from "react-icons/lib/md/close";
 import MdInfoOutline from "react-icons/lib/md/info-outline";
 import MdInfo from "react-icons/lib/md/info";
 import MdSettings from "react-icons/lib/md/settings";
 
+import genLib from "../lib/generalLibrary";
 import Page from "./Page";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
@@ -59,7 +58,6 @@ class Reader extends React.Component {
       showInfo: false,
       firstLoad: false,
       pageStyle: {
-        marginLeft: "0",
         transition: "150ms cubic-bezier(0.4, 0.0, 0.6, 1)",
       },
       singlePgMode:
@@ -112,29 +110,55 @@ class Reader extends React.Component {
     let actionIconSize = this.state.windowWidth > MOBILE ? 24 : 18;
 
     // Scroll back to the top of the page before anything is rendered
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: "30", behavior: "smooth" });
 
     return (
       <div className="reader-container" tabIndex="0">
-        <div className="reader">
+        <div className="controls-container">
           <div className="controls">
-            <div className="ctrl-left"></div>
-            <div className="ctrl-center">
+            <div className="ctrl-left">
               <div className="ctrl-title">
                 <strong>{this.selection}</strong> - {this.chapter}
               </div>
             </div>
+            <div className="ctrl-center"></div>
             <div className="ctrl-right">
-              {this.state.showInfo ? (
-                <MdInfo className="action-icon" onClick={this.handleInfo} size={actionIconSize} />
-              ) : (
-                <MdInfoOutline
-                  className="action-icon"
-                  onClick={this.handleInfo}
-                  size={actionIconSize}
-                />
-              )}
-
+              <div className="info-cont">
+                <Dropdown
+                  attach={
+                    <MdInfoOutline
+                      className="action-icon"
+                      onClick={this.handleInfo}
+                      size={actionIconSize}
+                    />
+                  }
+                >
+                  <div className="info">
+                    <div className="credit">
+                      <small className="credit-title">GROUP</small>
+                      <span className="credit-name">{chapterObj.group || "maigo"}</span>
+                    </div>
+                    {chapterObj.trans && (
+                      <div className="credit">
+                        <small className="credit-title">TRANSLATION</small>
+                        <span className="credit-name">{chapterObj.trans}</span>
+                      </div>
+                    )}
+                    {chapterObj.let && (
+                      <div className="credit">
+                        <small className="credit-title">LETTERING</small>
+                        <span className="credit-name">{chapterObj.let}</span>
+                      </div>
+                    )}
+                    {chapterObj.red && (
+                      <div className="credit">
+                        <small className="credit-title">REDRAWS</small>
+                        <span className="credit-name">{chapterObj.red}</span>
+                      </div>
+                    )}
+                  </div>
+                </Dropdown>
+              </div>
               <Dropdown attach={<MdSettings className="action-icon" size={actionIconSize} />}>
                 <DropdownItem
                   name={"pageMode"}
@@ -152,83 +176,58 @@ class Reader extends React.Component {
                 />
               </Dropdown>
 
-              <Link to={`/r/${this.selection}`}>
-                <MdClose className="action-icon" size={actionIconSize} />
-              </Link>
-            </div>
-            {this.state.showInfo && (
-              <div className="info">
-                <div className="credit">
-                  <small className="credit-title">GROUP</small>
-                  <span className="credit-name">{chapterObj.group || "maigo"}</span>
-                </div>
-                {chapterObj.trans && (
-                  <div className="credit">
-                    <small className="credit-title">TRANSLATION</small>
-                    <span className="credit-name">{chapterObj.trans}</span>
-                  </div>
-                )}
-                {chapterObj.let && (
-                  <div className="credit">
-                    <small className="credit-title">LETTERING</small>
-                    <span className="credit-name">{chapterObj.let}</span>
-                  </div>
-                )}
-                {chapterObj.red && (
-                  <div className="credit">
-                    <small className="credit-title">REDRAWS</small>
-                    <span className="credit-name">{chapterObj.red}</span>
-                  </div>
-                )}
+              <div>
+                <Link to={`/r/${this.selection}`}>
+                  <MdClose className="action-icon" size={actionIconSize} />
+                </Link>
               </div>
-            )}
+            </div>
           </div>
-
-          <div className="pages-container" style={this.state.pageStyle}>
-            <div className="pages">
-              {!this.state.spread &&
-                !this.state.singlePgMode &&
-                Number(currPg) + 1 !== this.state.lastPg && (
-                  <Page
-                    containerClass={"pgContainer leftPgCont"}
-                    imgClass={"leftPg"}
-                    src={`${chapterObj.src}/${this.state.leftPgCount}.${this.state.leftPgType}`}
-                    loaded={this.handleLeftLoaded}
-                    error={this.handleLeftError}
-                    show={this.state.leftShow}
-                    imgWidth={this.state.leftWidth}
-                    spread={this.handleSpread}
-                    click={this.handlePages}
-                  />
-                )}
-              {Number(currPg) + 1 === this.state.lastPg && (
-                <div className="chapterEnds">
-                  {/* <h1>Thanks for reading!</h1> */}
-                  {/* <small>That was the last page.</small> */}
-                </div>
-              )}
-
-              {currPg > "0" ? (
+        </div>
+        <div className="pages-container" style={this.state.pageStyle}>
+          <div className="pages">
+            {!this.state.spread &&
+              !this.state.singlePgMode &&
+              Number(currPg) + 1 !== this.state.lastPg && (
                 <Page
-                  containerClass={
-                    "pgContainer " +
-                    (this.state.singlePgMode ? "" : "rightPgCont ") +
-                    (this.state.spread ? "spread" : "")
-                  }
-                  imgClass={"rightPg"}
-                  src={`${chapterObj.src}/${this.state.rightPgCount}.${this.state.rightPgType}`}
-                  loaded={this.handleRightLoaded}
-                  error={this.handleRightError}
-                  show={this.state.rightShow}
-                  imgWidth={this.state.rightWidth}
+                  containerClass={"pgContainer leftPgCont"}
+                  imgClass={"leftPg"}
+                  src={`${chapterObj.src}/${this.state.leftPgCount}.${this.state.leftPgType}`}
+                  loaded={this.handleLeftLoaded}
+                  error={this.handleLeftError}
+                  show={this.state.leftShow}
+                  imgWidth={this.state.leftWidth}
                   spread={this.handleSpread}
                   click={this.handlePages}
-                  singlePgMode={this.state.singlePgMode}
                 />
-              ) : (
-                <div className="chapterEnds">{/* <h1>Enjoy!</h1> */}</div>
               )}
-            </div>
+            {Number(currPg) + 1 === this.state.lastPg && (
+              <div className="chapterEnds">
+                {/* <h1>Thanks for reading!</h1> */}
+                {/* <small>That was the last page.</small> */}
+              </div>
+            )}
+
+            {currPg > "0" ? (
+              <Page
+                containerClass={
+                  "pgContainer " +
+                  (this.state.singlePgMode ? "" : "rightPgCont ") +
+                  (this.state.spread ? "spread" : "")
+                }
+                imgClass={"rightPg"}
+                src={`${chapterObj.src}/${this.state.rightPgCount}.${this.state.rightPgType}`}
+                loaded={this.handleRightLoaded}
+                error={this.handleRightError}
+                show={this.state.rightShow}
+                imgWidth={this.state.rightWidth}
+                spread={this.handleSpread}
+                click={this.handlePages}
+                singlePgMode={this.state.singlePgMode}
+              />
+            ) : (
+              <div className="chapterEnds">{/* <h1>Enjoy!</h1> */}</div>
+            )}
           </div>
         </div>
       </div>
@@ -244,9 +243,7 @@ class Reader extends React.Component {
     this.setState((prevState) => {
       let currWidth = document.documentElement.clientWidth;
       prevState.windowWidth = currWidth;
-      if (currWidth <= DESKTOP) {
-        prevState.pageStyle = { ...prevState.pageStyle, marginLeft: "0" };
-      }
+
       if (currWidth <= MOBILE) {
         prevState.singlePgMode = true;
       }

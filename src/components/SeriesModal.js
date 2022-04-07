@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Image from "./Image";
-import sData from "./data/seriesData";
-import genLib from "./lib/generalLibrary";
+import sData from "../data/seriesData";
+import genLib from "../lib/generalLibrary";
 
 import "./SeriesModal.css";
 

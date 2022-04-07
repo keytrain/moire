@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import logo from "./img/logoB.png";
-import discordIcon from "./img/discord-icon.svg";
 import { Route } from "react-router-dom";
-import data from "./data/releaseData";
-import SeriesList from "./SeriesList";
-import SeriesModal from "./SeriesModal";
 import MdFilterList from "react-icons/lib/md/filter-list";
 import MdSearch from "react-icons/lib/md/search";
 import MdSort from "react-icons/lib/md/sort";
 import MdMoreVert from "react-icons/lib/md/more-vert";
+
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
+import data from "../data/releaseData";
+import SeriesList from "./SeriesList";
+import SeriesModal from "./SeriesModal";
+
+import logo from "../img/logoB.png";
+import { ReactComponent as DiscordIcon } from "../img/discord-icon.svg";
+
+import "./App.css";
 
 function App() {
   const [seriesData, setSeriesData] = useState(
@@ -26,18 +29,19 @@ function App() {
   const [searchBuffer, setSearchBuffer] = useState("");
 
   const handleFilter = (e) => {
-    let value = e.currentTarget.attributes.value.value;
-    let name = e.currentTarget.attributes.name.value;
+    setFilter(e);
+    // let value = e.currentTarget.attributes.value.value;
+    // let name = e.currentTarget.attributes.name.value;
 
-    switch (name) {
-      case "sort":
-        setSort(value);
-        break;
-      case "filter":
-        setFilter(value);
-        break;
-      default:
-    }
+    // switch (name) {
+    //   case "sort":
+    //     setSort(value);
+    //     break;
+    //   case "filter":
+    //     setFilter(value);
+    //     break;
+    //   default:
+    // }
   };
 
   const handleSearch = (e) => {
@@ -102,12 +106,44 @@ function App() {
   return (
     <div>
       <Route path="/r/:series" render={(props) => <SeriesModal {...props} />} />
-      <nav>
-        <div className="nav-container">
-          <div className="logo-container">
-            <img src={logo} className="logo" alt="logo" />
-          </div>
+      <div className="logo-container">
+        <img src={logo} className="logo" alt="logo" />
+        <div className="logo-text">
+          <span style={{ color: "#888" }}>まいご (maigo)</span>
+        </div>
+      </div>
 
+      <div className="wrapper">
+        <div className="filter-controls">
+          <div className="filters">
+            {["All", "Current", "Complete", "Dropped"].map((e) => (
+              <div
+                style={filter === e ? { borderBottom: "2px solid #ccc" } : {}}
+                onClick={() => handleFilter(e)}
+              >
+                {e}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="serieslist-container">
+          <div className="serieslist">
+            <SeriesList title="" list={seriesData} />
+          </div>
+        </div>
+        <footer>
+          <div className="timeline-text">2009 - ?</div>
+          <div className="discord">
+            <div>
+              <a href="https://discord.gg/CnZBudA">
+                <DiscordIcon style={{ width: "24px" }} />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+      {/* <nav>
+        <div className="nav-container">
           <div className="filter-container">
             <div className="search">
               <MdSearch size={24} style={{ marginBottom: "2px", marginRight: "0.3rem" }} />
@@ -115,10 +151,10 @@ function App() {
             </div>
             <div className="filterBy">
               <Dropdown
+                position="top"
                 attach={
                   <div>
-                    <MdFilterList size={24} style={{ marginBottom: "2px" }} />{" "}
-                    <small>FILTER BY</small>
+                    <MdFilterList size={24} style={{ marginBottom: "2px" }} /> <small>FILTER</small>
                   </div>
                 }
               >
@@ -136,9 +172,10 @@ function App() {
             </div>
             <div className="sortBy">
               <Dropdown
+                position="top"
                 attach={
                   <div>
-                    <MdSort size={24} style={{ marginBottom: "2px" }} /> <small>SORT BY</small>
+                    <MdSort size={24} style={{ marginBottom: "2px" }} /> <small>SORT</small>
                   </div>
                 }
               >
@@ -156,7 +193,10 @@ function App() {
             </div>
 
             <div className="more">
-              <Dropdown attach={<MdMoreVert size={24} style={{ marginBottom: "2px" }} />}>
+              <Dropdown
+                position="top"
+                attach={<MdMoreVert size={24} style={{ marginBottom: "2px" }} />}
+              >
                 <div>
                   <a href="https://discord.gg/CnZBudA">
                     <DropdownItem
@@ -178,14 +218,7 @@ function App() {
             </div>
           </div>
         </div>
-      </nav>
-      <div className="wrapper">
-        <div className="serieslist-container">
-          <div className="serieslist">
-            <SeriesList title="" list={seriesData} />
-          </div>
-        </div>
-      </div>
+      </nav> */}
     </div>
   );
 }

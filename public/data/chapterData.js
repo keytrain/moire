@@ -1,6 +1,13 @@
 window.chapterData = {
   series: {
     "Coffee Moon": {
+      19: {
+        date: new Date("Apr 6 2022 16:46:00 GMT-0800"),
+        src: "/img/releases/cm/19",
+        trans: "nex",
+        let: "kii, myran",
+        red: "myran",
+      },
       18: {
         date: new Date("Nov 23 2021 9:27:00 GMT-0800"),
         src: "/img/releases/cm/18",

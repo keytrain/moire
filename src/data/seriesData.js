@@ -15,7 +15,7 @@ export default {
         "Mika is so desperate to see her dead friend again that she tries to kill herself. Before anything can happen, she is saved by two mysterious travelers...",
         "Together with her two companions, she embarks on a journey into an illusory world where hope and despair are intertwined!",
       ],
-      author: "Yuhki Kamatani",
+      author: "Yūki Kamatani",
       licensed: false,
     },
     Mahoromi: {
