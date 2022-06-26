@@ -480,14 +480,7 @@ class Reader extends React.Component {
     this.setState((prevState) => {
       localStorage.resizeImageMode = value;
       prevState.resizeImageMode = value;
-      if (value === "Height") {
-        prevState.resizeImages = true;
-        if (this.props.match.params.page === "0") {
-          this.resetChapterToStart();
-        }
-      } else {
-        prevState.resizeImages = false;
-      }
+      prevState.resizeImages = value === "Height";
       return prevState;
     });
   };
