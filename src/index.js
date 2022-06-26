@@ -1,13 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-import Wrapper from "./components/Wrapper";
+import "./index.css";
+
+import App from "./components/App";
+import Discord from "./components/Discord";
+import Reader from "./components/Reader";
 
 ReactDOM.render(
   <Router>
-    <Route path="/" component={Wrapper} />
+    <Switch>
+      <Route exact path="/discord" component={Discord} />
+      <Route exact path="/r/:series/:chapter/:page" component={Reader} />
+      <Route path="/" component={App} />
+    </Switch>
   </Router>,
   document.getElementById("root")
 );

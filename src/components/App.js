@@ -118,6 +118,7 @@ function App() {
           <div className="filters">
             {["All", "Current", "Complete", "Dropped"].map((e) => (
               <div
+                key={e}
                 style={filter === e ? { borderBottom: "2px solid #ccc" } : {}}
                 onClick={() => handleFilter(e)}
               >

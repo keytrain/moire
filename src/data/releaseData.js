@@ -1,16 +1,16 @@
-let chData = window.chapterData
+let chData = window.chapterData;
 
 function sortChaps(arr) {
   return arr
     .sort((a, b) => {
       if (Number(a) < Number(b)) {
-        return -1
+        return -1;
       } else if (Number(a) > Number(b)) {
-        return 1
+        return 1;
       }
-      return 0
+      return 0;
     })
-    .reverse()
+    .reverse();
 }
 
 export default {
@@ -18,10 +18,7 @@ export default {
     {
       cover: "img/cover/cm.jpg",
       title: "Coffee Moon",
-      updated:
-        chData.series["Coffee Moon"][
-          sortChaps(Object.keys(chData.series["Coffee Moon"]))[0]
-        ].date,
+      updated: new Date("Apr 6 2022 16:46:00 GMT-0800"),
       completed: false,
     },
     {
@@ -36,17 +33,14 @@ export default {
       cover: "img/cover/kan.jpg",
       title: "Kannou Sensei",
       updated:
-        chData.series["Kannou Sensei"][
-          sortChaps(Object.keys(chData.series["Kannou Sensei"]))[0]
-        ].date,
+        chData.series["Kannou Sensei"][sortChaps(Object.keys(chData.series["Kannou Sensei"]))[0]]
+          .date,
     },
     {
       cover: "img/cover/sen.jpg",
       title: "Sennetsu",
-      updated:
-        chData.series["Sennetsu"][
-          sortChaps(Object.keys(chData.series["Sennetsu"]))[0]
-        ].date,
+      updated: new Date("April 7 2021 19:40:00 GMT-0800"),
+      completed: false,
     },
     {
       cover: "img/cover/mah.jpg",
@@ -323,4 +317,4 @@ export default {
       completed: false,
     },
   ],
-}
+};

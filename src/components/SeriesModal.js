@@ -119,12 +119,6 @@ class SeriesModal extends Component {
                   ) : (
                     <div>
                       <small>
-                        <a
-                          className="modal-links"
-                          href="https://www.dropbox.com/s/uwxkqshyxmct83z/Maigo%20Repository.txt?dl=0"
-                        >
-                          Download
-                        </a>
                         <a className="modal-links" href="https://www.amazon.co.jp/">
                           Amazon
                         </a>{" "}
@@ -136,6 +130,12 @@ class SeriesModal extends Component {
                         </a>{" "}
                         <a className="modal-links" href="http://www.yesasia.com/us/en/home.html">
                           YesAsia
+                        </a>{" "}
+                        <a
+                          className="modal-links"
+                          href="https://www.dropbox.com/s/uwxkqshyxmct83z/Maigo%20Repository.txt?dl=0"
+                        >
+                          Download
                         </a>
                       </small>
                     </div>
