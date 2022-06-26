@@ -30,6 +30,13 @@
   cursor: pointer;
   background-color: #e1e1e1;
 }
+.dropdown-row.header .dropdown-icon{
+  width: 10%;
+}
+.dropdown-row.header:hover {
+  cursor:default;
+  background-color: inherit;
+}
 .dropdown-icon,
 .dropdown-text,
 .dropdown-right {

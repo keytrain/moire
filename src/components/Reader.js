@@ -66,6 +66,8 @@ class Reader extends React.Component {
           ? true
           : false,
       windowWidth: document.documentElement.clientWidth,
+      resizeImages: localStorage.getItem("resizeImages") == "Match Window",
+      resizeImageMode: localStorage.getItem("resizeImages") ? localStorage.getItem("resizeImages") : "Match Window"
     };
   }
 
@@ -161,6 +163,10 @@ class Reader extends React.Component {
               </div>
               <Dropdown attach={<MdSettings className="action-icon" size={actionIconSize} />}>
                 <DropdownItem
+                    text={"Page Display"}
+                    header={true}
+                />
+                <DropdownItem
                   name={"pageMode"}
                   icon={""}
                   selection={this.state.pageMode}
@@ -173,6 +179,25 @@ class Reader extends React.Component {
                   selection={this.state.pageMode}
                   text={"Double Page"}
                   handle={this.handlePageMode}
+                />
+
+                <DropdownItem
+                    text={"Image Height"}
+                    header={true}
+                />
+                <DropdownItem
+                  name={"resizeImages"}
+                  icon={""}
+                  selection={this.state.resizeImageMode}
+                  text={"Match Window"}
+                  handle={this.handleImageResize}
+                />
+                <DropdownItem
+                  name={"resizeImages"}
+                  icon={""}
+                  selection={this.state.resizeImageMode}
+                  text={"Full Size"}
+                  handle={this.handleImageResize}
                 />
               </Dropdown>
 
@@ -190,7 +215,7 @@ class Reader extends React.Component {
               !this.state.singlePgMode &&
               Number(currPg) + 1 !== this.state.lastPg && (
                 <Page
-                  containerClass={"pgContainer leftPgCont"}
+                  containerClass={"pgContainer leftPgCont " + (this.state.resizeImages ? "resize" : "")}
                   imgClass={"leftPg"}
                   src={`${chapterObj.src}/${this.state.leftPgCount}.${this.state.leftPgType}`}
                   loaded={this.handleLeftLoaded}
@@ -213,7 +238,8 @@ class Reader extends React.Component {
                 containerClass={
                   "pgContainer " +
                   (this.state.singlePgMode ? "" : "rightPgCont ") +
-                  (this.state.spread ? "spread" : "")
+                  (this.state.spread ? "spread" : "") +
+                  (this.state.resizeImages ? "resize" : "")
                 }
                 imgClass={"rightPg"}
                 src={`${chapterObj.src}/${this.state.rightPgCount}.${this.state.rightPgType}`}
@@ -445,6 +471,24 @@ class Reader extends React.Component {
         }
       } else {
         prevState.singlePgMode = false;
+      }
+      return prevState;
+    });
+  };
+
+  handleImageResize = (e) => {
+    let value = e.currentTarget.attributes.value.value;
+
+    this.setState((prevState) => {
+      localStorage.resizeImageMode = value;
+      prevState.resizeImageMode = value;
+      if (value === "Match Window") {
+        prevState.resizeImages = true;
+        if (this.props.match.params.page === "0") {
+          this.resetChapterToStart();
+        }
+      } else {
+        prevState.resizeImages = false;
       }
       return prevState;
     });
