@@ -25,30 +25,36 @@
 .dropdown-row {
   width: 11.5rem;
   padding: 0.2rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .dropdown-row:hover {
   cursor: pointer;
   background-color: #e1e1e1;
 }
-.dropdown-icon,
-.dropdown-text,
-.dropdown-right {
-  display: inline-block;
-  vertical-align: middle;
+.dropdown-row.header .dropdown-icon {
+  width: 1rem;
+}
+.header {
+  color: #999;
+}
+.dropdown-row.header:hover {
+  cursor: default;
+  background-color: inherit;
 }
 .dropdown-icon {
   text-align: center;
-  width: 20%;
+  flex: 0 0 20px;
 }
 .dropdown-text {
   text-align: left;
-  width: 50%;
+  flex: 1 1 auto;
   /* padding-right:5rem; */
   /* padding: 0.2rem 0.5rem; */
 }
 .dropdown-right {
   text-align: right;
-  width: 20%;
 }
 .dropdown-text-active {
   font-weight: 700;
