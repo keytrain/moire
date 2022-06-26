@@ -66,9 +66,9 @@ class Reader extends React.Component {
           ? true
           : false,
       windowWidth: document.documentElement.clientWidth,
-      resizeImages: localStorage.getItem("resizeImages") == "Height",
-      resizeImageMode: localStorage.getItem("resizeImages")
-        ? localStorage.getItem("resizeImages")
+      resizeImages: localStorage.getItem("resizeImageMode") == "Height",
+      resizeImageMode: localStorage.getItem("resizeImageMode")
+        ? localStorage.getItem("resizeImageMode")
         : "Height",
     };
   }
