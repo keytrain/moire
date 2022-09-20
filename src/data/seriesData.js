@@ -1,5 +1,15 @@
 export default {
   series: {
+    "Karakida-ke no Kosho Gurashi": {
+      cover: ["./img/cover/kara/1.jpg"],
+      synopsis: [
+        "The world's largest collection of used bookstores, Kanda-Jinbōchō. There begins the story of the unforgettable days the three Karakida sisters spend surrounded by the scent of used books when they inherit the used bookstore their grandfather left behind.",
+      ],
+      author: "Toume Kei",
+      jp: "百木田家の古書暮らし",
+      mu: "https://www.mangaupdates.com/series/008netg/karakida-ke-no-kosho-gurashi",
+      licensed: false,
+    },
     "Coffee Moon": {
       cover: ["./img/cover/cm/2.jpg"],
       synopsis: [
@@ -7,7 +17,7 @@ export default {
         "The days carry on as normal, until one day, her routine chat with Danae takes a different turn: “What?! You can remember the today that happened yesterday too?” Despite their bleak situation, the girls reach towards tomorrow!",
       ],
       author: "Bota Mochito",
-      licensed: false,
+      licensed: "Yen Press",
     },
     "The End of the Journey": {
       cover: ["./img/cover/teotj/1.jpg"],
@@ -16,7 +26,7 @@ export default {
         "Together with her two companions, she embarks on a journey into an illusory world where hope and despair are intertwined!",
       ],
       author: "Yūki Kamatani",
-      licensed: false,
+      licensed: "Kodansha",
     },
     Mahoromi: {
       cover: ["./img/cover/mah/3.jpg"],
@@ -25,6 +35,8 @@ export default {
         "Later, he goes along with his friend Akira to take drawings of another old house that's going to be demolished. As he meanders through this old house, he has a somewhat supernatural and startling experience. Are these feelings and occurrences a result of the souls of the buildings themselves, as Akira suggests? Or is there some even deeper mystery to Niwa's uncanny experiences?",
       ],
       author: "Toume Kei",
+      jp: "マホロミ",
+      mu: "https://www.mangaupdates.com/series/vkd7ier/mahoromi-jikuu-kenchiku-genshitan",
       licensed: false,
     },
     Sennetsu: {
@@ -33,6 +45,8 @@ export default {
         "Ruri, a college student working part time at a convenience store, finds herself drawn to Nosegawa, a middle-aged customer who comes in every day to buy two packs of cigarettes. When she works up the nerve to ask him for a ride home one rainy day, their interaction in the car kindles something in Ruri's heart - a strange and unknown new heat...",
       ],
       author: "Noda Ayako",
+      jp: "潜熱",
+      mu: "https://www.mangaupdates.com/series/7euqxp5/sennetsu",
       licensed: false,
     },
     "Spotted Flower": {
@@ -41,6 +55,7 @@ export default {
         "It's about the married life between a newlywed working otaku and his pregnant wife.",
       ],
       author: "Kio Shimoku",
+      mu: "https://www.mangaupdates.com/series/afdqvqh/spotted-flower",
       licensed: false,
     },
     "Kannou Sensei": {
@@ -50,6 +65,8 @@ export default {
         'As once was spoken by Zarathustra: "Everything in a woman is a riddle."',
       ],
       author: "Yoshida Motoi",
+      jp: "官能先生",
+      mu: "https://www.mangaupdates.com/series/gji8umh/kannou-sensei",
       licensed: false,
     },
     "Mahoutsukai no Yome": {
@@ -104,7 +121,6 @@ export default {
       cover: ["./img/cover/ringo/1.jpg"],
       synopsis: [
         "A terrible creature has been plaguing the community: a man with a fishbowl for a head. When he attacks someone, the goldfish leaps out of his bowl and drinks their blood. The victim is irreversibly transformed into a goldfish! This terrible crime has happened to high-schooler Kousuke's little sister. With no other option, he takes care of his goldfish-sister as best he can.",
-        "One day, he comes across a strange girl named Ringo, who wears a school swimsuit, carries an umbrella, and keeps a gun hanging around her neck. Ringo is an apprentice blood diver, and the gun is her way of shooting herself into the wounds of the fishbowl man's victims. If she can get to them in time, she can prevent them from turning into goldfish. Ringo's mentor, Ichigo, says that she's heard of a way to turn people back from goldfish into humans. Kousuke is determined to help Ringo find a way to help his sister and the loved ones of his friends at school who have met the same fishy fate!",
       ],
       author: "Abe Youichi",
       licensed: false,

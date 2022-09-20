@@ -71,8 +71,8 @@ class SeriesModal extends Component {
 
           <div className="modal-right">
             <div className="modal-text">
-              <h1 className="modal-header">{this.selection}</h1>
-              <h4 className="header-lead">{this.selInfo.author}</h4>
+              <h2 className="modal-header">{this.selection}</h2>
+              <h5 className="header-lead">{this.selInfo.author}</h5>
               <hr />
               <div className="modal-synopsis">
                 {this.selInfo.synopsis.map((e, index) => (
@@ -113,27 +113,51 @@ class SeriesModal extends Component {
                 <div className="modal-link-section">
                   {this.selInfo.licensed ? (
                     <small>
-                      Licensed and distributed in English by{" "}
-                      <strong>{this.selInfo.licensed}</strong>
+                      Now licensed and distributed by <strong>{this.selInfo.licensed}</strong>
                     </small>
                   ) : (
                     <div>
                       <small>
-                        <a className="modal-links" href="https://www.amazon.co.jp/">
-                          Amazon
-                        </a>{" "}
-                        <a className="modal-links" href="http://www.cdjapan.co.jp/">
-                          CDJapan
-                        </a>{" "}
-                        <a className="modal-links" href="http://www.hmv.co.jp/en/">
-                          HMV
-                        </a>{" "}
-                        <a className="modal-links" href="http://www.yesasia.com/us/en/home.html">
-                          YesAsia
+                        {this.selInfo.mu && (
+                          <a className="modal-links" target="_blank" href={this.selInfo.mu}>
+                            More Info
+                          </a>
+                        )}
+                        <a
+                          className="modal-links"
+                          target="_blank"
+                          href={`https://www.amazon.co.jp/${
+                            this.selInfo.jp ? "s?k=" + this.selInfo.jp : ""
+                          }`}
+                        >
+                          Amazon.co.jp
                         </a>{" "}
                         <a
                           className="modal-links"
-                          href="https://www.dropbox.com/s/uwxkqshyxmct83z/Maigo%20Repository.txt?dl=0"
+                          target="_blank"
+                          href={
+                            this.selInfo.jp
+                              ? `https://www.cdjapan.co.jp/searchuni?term.media_format=&q=${this.selInfo.jp}`
+                              : "http://www.cdjapan.co.jp/"
+                          }
+                        >
+                          CDJapan
+                        </a>{" "}
+                        <a
+                          className="modal-links"
+                          target="_blank"
+                          href={
+                            this.selInfo.jp
+                              ? `https://www.hmv.co.jp/en/search/keyword_${this.selInfo.jp}/target_ALL/type_sr/`
+                              : "https://www.hmv.co.jp/en/"
+                          }
+                        >
+                          HMV
+                        </a>{" "}
+                        <a
+                          className="modal-links"
+                          target="_blank"
+                          href="https://mega.nz/#F!Up5SxBoR!KQB3dq0W4M5mX4YcycJb9Q"
                         >
                           Download
                         </a>

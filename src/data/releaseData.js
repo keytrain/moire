@@ -16,31 +16,38 @@ function sortChaps(arr) {
 export default {
   list: [
     {
+      cover: "img/cover/kara.jpg",
+      title: "Karakida-ke no Kosho Gurashi",
+      updated:
+        chData.series["Karakida-ke no Kosho Gurashi"][
+          sortChaps(Object.keys(chData.series["Karakida-ke no Kosho Gurashi"] || {}))[0]
+        ].date,
+    },
+    {
+      cover: "img/cover/teotj.jpg",
+      title: "The End of the Journey",
+      updated: new Date("Aug 30 2022 16:20:00 GMT-0700"),
+      completed: true,
+    },
+    {
+      cover: "img/cover/kan.jpg",
+      title: "Kannou Sensei",
+      updated:
+        chData.series["Kannou Sensei"][
+          sortChaps(Object.keys(chData.series["Kannou Sensei"] || {}))[0]
+        ].date,
+    },
+    {
       cover: "img/cover/cm.jpg",
       title: "Coffee Moon",
       updated: new Date("Apr 6 2022 16:46:00 GMT-0800"),
       completed: false,
     },
     {
-      cover: "img/cover/teotj.jpg",
-      title: "The End of the Journey",
-      updated:
-        chData.series["The End of the Journey"][
-          sortChaps(Object.keys(chData.series["The End of the Journey"]))[0]
-        ].date,
-    },
-    {
-      cover: "img/cover/kan.jpg",
-      title: "Kannou Sensei",
-      updated:
-        chData.series["Kannou Sensei"][sortChaps(Object.keys(chData.series["Kannou Sensei"]))[0]]
-          .date,
-    },
-    {
       cover: "img/cover/sen.jpg",
       title: "Sennetsu",
-      updated: new Date("April 7 2021 19:40:00 GMT-0800"),
-      completed: false,
+      updated:
+        chData.series["Sennetsu"][sortChaps(Object.keys(chData.series["Sennetsu"] || {}))[0]].date,
     },
     {
       cover: "img/cover/mah.jpg",
@@ -57,10 +64,6 @@ export default {
     {
       cover: "img/cover/yome.jpg",
       title: "Mahoutsukai no Yome",
-      // updated:
-      //   chData.series["Mahoutsukai no Yome"][
-      //     sortChaps(Object.keys(chData.series["Mahoutsukai no Yome"]))[0]
-      //   ].date,
       updated: new Date("July 04 2020 11:45:00 GMT-0800"),
       completed: false,
     },

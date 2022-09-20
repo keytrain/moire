@@ -148,6 +148,12 @@ class Reader extends React.Component {
                         <span className="credit-name">{chapterObj.trans}</span>
                       </div>
                     )}
+                    {chapterObj.edit && (
+                      <div className="credit">
+                        <small className="credit-title">EDITOR</small>
+                        <span className="credit-name">{chapterObj.edit}</span>
+                      </div>
+                    )}
                     {chapterObj.let && (
                       <div className="credit">
                         <small className="credit-title">LETTERING</small>
@@ -236,8 +242,8 @@ class Reader extends React.Component {
                 containerClass={
                   "pgContainer " +
                   (this.state.singlePgMode ? "" : "rightPgCont ") +
-                  (this.state.spread ? "spread" : "") +
-                  (this.state.resizeImages ? "resize" : "")
+                  (this.state.spread ? "spread " : "") +
+                  (this.state.resizeImages ? "resize " : "")
                 }
                 imgClass={"rightPg"}
                 src={`${chapterObj.src}/${this.state.rightPgCount}.${this.state.rightPgType}`}

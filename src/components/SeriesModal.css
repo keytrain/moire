@@ -60,6 +60,13 @@
   word-wrap: break-word;
   hyphens: auto;
 }
+.modal-subheader {
+  font-weight: 300;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  margin-top: -8px;
+}
 .modal-chapters-container {
   /* margin: 0 -0.5rem; */
 }
