@@ -1,0 +1,449 @@
+{
+  "Majo no Eden": {
+    "cover": ["./img/cover/eden/1.jpg"],
+    "synopsis": [
+      "All the world's creatures lived in harmony until humanity rose to power. The flora and fauna feared for their lives and hid from the humans, leaving behind a barren world with only rocks and dirt. There are a few exceptions... Witches, exceptional women with the gift to heed plants' words, live in secret lairs full of vibrant greenery.",
+      "Tula, a powerful witch nearing the end of her life, raised her apprentice Piri in one of these sanctuaries. Piri has a lot to learn. In fact, she can't even hear the plants' voices! Naturally, she has no desire to leave her secret haven—or Tula—but situations outside of her control force her away. Where will Piri go now? Will a gift from Tula help her find her way?"
+    ],
+    "author": "Yumeji",
+    "mu": "https://www.mangaupdates.com/series/mx2dwot/l-eden-des-sorcieres",
+    "licensed": false
+  },
+  "Muse no Shinzui": {
+    "cover": ["./img/cover/muse/1.jpg"],
+    "synopsis": [
+      "I'm nothing but a hollow shell. It's been that way since I was rejected from art school. I live an ordinary, boring life according to my mom's instructions. I go to the job she picked for me wearing the clothes she laid out for me in search of a man she can brag to her friends about. Will I ever be happy again? It's all I can think about."
+    ],
+    "author": "Fumino Aya",
+    "jp": "ミューズの真髄",
+    "mu": "https://www.mangaupdates.com/series/hu5u22b/muse-no-shinzui",
+    "licensed": false
+  },
+  "Karakida-ke no Kosho Gurashi": {
+    "cover": ["./img/cover/kara/1.jpg"],
+    "synopsis": [
+      "The world's largest collection of used bookstores, Kanda-Jinbōchō. There begins the story of the unforgettable days the three Karakida sisters spend surrounded by the scent of used books when they inherit the used bookstore their grandfather left behind."
+    ],
+    "author": "Toume Kei",
+    "jp": "百木田家の古書暮らし",
+    "mu": "https://www.mangaupdates.com/series/008netg/karakida-ke-no-kosho-gurashi",
+    "licensed": false
+  },
+  "Coffee Moon": {
+    "cover": ["./img/cover/cm/2.jpg"],
+    "synopsis": [
+      "The light is gone. Unable to escape the darkness, Pieta repeats the same day. Every day she walks to school down the same road, through the same rain, then talks with her friend Danae. Eventually, she finds happiness in the repetition.",
+      "The days carry on as normal, until one day, her routine chat with Danae takes a different turn: “What?! You can remember the today that happened yesterday too?” Despite their bleak situation, the girls reach towards tomorrow!"
+    ],
+    "author": "Bota Mochito",
+    "licensed": "Yen Press"
+  },
+  "The End of the Journey": {
+    "cover": ["./img/cover/teotj/1.jpg"],
+    "synopsis": [
+      "Mika is so desperate to see her dead friend again that she tries to kill herself. Before anything can happen, she is saved by two mysterious travelers...",
+      "Together with her two companions, she embarks on a journey into an illusory world where hope and despair are intertwined!"
+    ],
+    "author": "Yūki Kamatani",
+    "licensed": "Kodansha"
+  },
+  "Mahoromi": {
+    "cover": ["./img/cover/mah/3.jpg"],
+    "synopsis": [
+      "Niwa, a college student of architecture, is moving into his deceased grandfather's house. He didn't know the man very well, but the house is conveniently close to school, and his grandfather was actually the architect who designed it. There's something unsettling about the house, though, and while he's wandering around, Niwa finds a mysterious old photograph of some girl who isn't his grandmother.",
+      "Later, he goes along with his friend Akira to take drawings of another old house that's going to be demolished. As he meanders through this old house, he has a somewhat supernatural and startling experience. Are these feelings and occurrences a result of the souls of the buildings themselves, as Akira suggests? Or is there some even deeper mystery to Niwa's uncanny experiences?"
+    ],
+    "author": "Toume Kei",
+    "jp": "マホロミ",
+    "mu": "https://www.mangaupdates.com/series/vkd7ier/mahoromi-jikuu-kenchiku-genshitan",
+    "licensed": false
+  },
+  "Sennetsu": {
+    "cover": ["./img/cover/sen/2.jpg"],
+    "synopsis": [
+      "Ruri, a college student working part time at a convenience store, finds herself drawn to Nosegawa, a middle-aged customer who comes in every day to buy two packs of cigarettes. When she works up the nerve to ask him for a ride home one rainy day, their interaction in the car kindles something in Ruri's heart - a strange and unknown new heat..."
+    ],
+    "author": "Noda Ayako",
+    "jp": "潜熱",
+    "mu": "https://www.mangaupdates.com/series/7euqxp5/sennetsu",
+    "licensed": false
+  },
+  "Spotted Flower": {
+    "cover": ["./img/cover/spo/2.jpg"],
+    "synopsis": [
+      "It's about the married life between a newlywed working otaku and his pregnant wife."
+    ],
+    "author": "Kio Shimoku",
+    "mu": "https://www.mangaupdates.com/series/afdqvqh/spotted-flower",
+    "licensed": false
+  },
+  "Kannou Sensei": {
+    "cover": ["./img/cover/kan/3.jpg"],
+    "synopsis": [
+      "Narumi Rokurou is still adrift in life in his forties, unmarried, and working as an editor at a publishing company while writing hardly lucrative literary fiction. His days enjoying life at his own pace are brought to an end one summer night, when a strange twist of fate brings Rokurou together with a mysterious beauty, beginning the story of their crazed love.",
+      "As once was spoken by Zarathustra: \"Everything in a woman is a riddle.\""
+    ],
+    "author": "Yoshida Motoi",
+    "jp": "官能先生",
+    "mu": "https://www.mangaupdates.com/series/gji8umh/kannou-sensei",
+    "licensed": false
+  },
+  "Mahoutsukai no Yome": {
+    "cover": ["./img/cover/yome/13.jpg"],
+    "synopsis": [
+      "Chise Hatori is only 16, but she has lost far more than most. With neither family nor hope, it seems all doors are closed to her. In her darkest hour, a mysterious magus appears before Chise, offering a chance she could not turn down. Will the magus, who seems closer to demon than human, bring her the light she desperately seeks, or drown her in ever deeper shadows?"
+    ],
+    "author": "Yamazaki Kore",
+    "licensed": "Seven Seas"
+  },
+  "Seifuku no Vampiress Lord": {
+    "cover": ["./img/cover/vamp/2.jpg"],
+    "synopsis": [
+      "Normal high school girl Irie Yuunagi suddenly has her blood sucked by a strange man one night. Yuunagi wakes up as a vampire and learns that she has been added to the man who bit her, Rin's, family. She begins to learn about the rules of the vampire world from Rin."
+    ],
+    "author": "Matsumoto Tomoki",
+    "licensed": false
+  },
+  "Prunus Girl": {
+    "cover": ["./img/cover/prunus/1.jpg"],
+    "synopsis": [
+      "Maki-kun goes to look at the results of his high school entrance exam results and meets a beautiful girl. Could this be a fated encounter? He's thrilled to find out that the same girl, Aikawa Kizuna, not only ends up going to his school, but is in his class. However, he's not so thrilled when he find out that Aikawa isn't a girl! Not a girl, and not really a guy, kind of both--and Maki finds himself getting along with popular Aikawa, getting pulled in to his pace!"
+    ],
+    "author": "Matsumoto Tomoki",
+    "licensed": false
+  },
+  "Boku wa Tomodachi ga Sukunai": {
+    "cover": ["./img/cover/bts/1.jpg"],
+    "synopsis": [
+      "Hasegawa Kodaka has transferred schools, and he's having a hard time making friends. It doesn't help that his blond hair tends to make people think he's a delinquent. One day, he runs into his bad-tempered, solitary classmate Yozora, while she's talking animatedly to her imaginary friend Tomo. Realizing that neither of them has any actual friends, they decide that the best way to alter this situation is to form a club and start recruiting."
+    ],
+    "author": "Hirasaka Yomi/Itachi",
+    "licensed": "Seven Seas"
+  },
+  "Tasogare Otome x Amnesia": {
+    "cover": ["./img/cover/taso/1.jpg"],
+    "synopsis": [
+      "A young woman, by some strange occurrence, was left to die alone in the former building of the Academy for Sincere Teachings. Mysteriously, there is one person who can see her in ghost form: Niiya Teiichi, a freshman. Now they both seek to find out the reasoning behind her death, and what could have caused it."
+    ],
+    "author": "Maybe",
+    "licensed": false
+  },
+  "Natsu no Zenjitsu": {
+    "cover": ["./img/cover/nat/1.jpg"],
+    "synopsis": [
+      "This is a story about two adults, a man and an older woman. They meet each other because of their own jobs and their relationship will develop from this point on. Will it develop smoothly? Or will there be unforeseen events?"
+    ],
+    "author": "Yoshida Motoi",
+    "licensed": false
+  },
+  "Chimoguri Ringo to Kingyobachi Otoko": {
+    "cover": ["./img/cover/ringo/1.jpg"],
+    "synopsis": [
+      "A terrible creature has been plaguing the community: a man with a fishbowl for a head. When he attacks someone, the goldfish leaps out of his bowl and drinks their blood. The victim is irreversibly transformed into a goldfish! This terrible crime has happened to high-schooler Kousuke's little sister. With no other option, he takes care of his goldfish-sister as best he can."
+    ],
+    "author": "Abe Youichi",
+    "licensed": false
+  },
+  "Reversible!": {
+    "cover": ["./img/cover/rev/1.jpg"],
+    "synopsis": [
+      "Shuu Kaidou is sent away to an all boys boarding school with a very strange rule: half the students must take turns to dress as girls!"
+    ],
+    "author": "Suemitsu Dicca",
+    "licensed": false
+  },
+  "Ashita Dorobou": {
+    "cover": ["./img/cover/ashita/1.jpg"],
+    "synopsis": [
+      "Kyouichi Miyasako is the star employee at his company. Why does he work so hard? He doesn’t know either. What he does know is that he sorely misses his girlfriend… the one he broke up with in college because he couldn’t put up with her hobbies any further. One day, an ominous black sphere mysteriously appears in the skies and shoots a laser beam in his direction. He doesn’t get hit, of course, but when the smoke clears, guess who he sees?"
+    ],
+    "author": "Hokazono Masaya/Betten Court",
+    "licensed": false
+  },
+  "Benten Rock Yuu": {
+    "cover": ["./img/cover/ben/1.jpg"],
+    "synopsis": [
+      "A Japanese goddess of old takes a keen interest in Anamori Izumi and her ability, a more powerful form of synesthesia. The goddess has a request for her, one which will require her to break out of her shell... and learn how to play the electric guitar."
+    ],
+    "author": "Watarai Keiji",
+    "licensed": false
+  },
+  "Boku ni Koisuru Mechanical": {
+    "cover": ["./img/cover/mech/1.jpg"],
+    "synopsis": [
+      "Shinjou Maita is trying to get new members for his movie research society club when he stumbles upon angelic first-year Hotohara Shiori. Life seems to be looking up for him, until a strange woman appears in his apartment, warning him that his life is in danger."
+    ],
+    "author": "Watarai Keiji",
+    "licensed": false
+  },
+  "Choku!": {
+    "cover": ["./img/cover/cho/1.jpg"],
+    "synopsis": [
+      "A girl who seems to lack social skills and awareness decides to show her love to the guy she likes. Due to her persistence, the guy assumes a passive role and is often dragged by the girl to undertake particular activities that are often abnormal in nature."
+    ],
+    "author": "Tanigawa Nico",
+    "licensed": false
+  },
+  "Dekoboko Girlish": {
+    "cover": ["./img/cover/deko/1.jpg"],
+    "synopsis": [
+      "At a glance, Oriko Amano is a cool, handsome male university student, whilst on the other hand, Natsuo Koike is small and childlike in appearance. However, the truth is that Oriko is actually a girl, and they are both twenty years old! Dekoboko Girlish follows the daily lives of Oriko, Natsuo and the other members of their university's classical theatre group."
+    ],
+    "author": "Hara Ayumi",
+    "licensed": false
+  },
+  "Hajiotsu": {
+    "cover": ["./img/cover/haj/1.jpg"],
+    "synopsis": [
+      "Ashihara Himari hates men. Or rather, she doesn't understand them. In order to alleviate this problem, her friends decide that the first step to take is confess to someone."
+    ],
+    "author": "Unohana Tsukasa",
+    "licensed": false
+  },
+  "Gisèle Alain": {
+    "cover": ["./img/cover/gis/1.jpg"],
+    "synopsis": [
+      "\"Gisèle Alain will provide you with any service, Madame,\" Gisèle claims as she puts a sign on her door. Gisèle Alain is the owner of an apartment building, who decides to go into business, taking on whatever request that she receives. She forces Eric, one of her tenants with overdue rent, to tag along on her adventures. Their first mission is to find another resident\\'s cat which has been missing for three days. Upon further investigation, they find a suspicious man taking away cats to an unknown alley. Gisèle decides to investigate further...what will she discover?",
+      "An amusing yet calm service providing you with anything you want; at your service by Gisèle Alain!"
+    ],
+    "author": "Kasai Sui",
+    "licensed": false
+  },
+  "Himawari": {
+    "cover": ["./img/cover/hima/1.jpg"],
+    "synopsis": [
+      "The story starts with two members of the Space Club launching their 21st rocket, Himawari. The club president, Amamiya Ginga, is the son of a hero who does everything with a grin and states that \"Nothing's impossible for the members of the Space Club!\" after jumping off the school's roof. The protagonist of this story, Hinata Youichi, is a space-lover and knowledgeable about starts, is a less outgoing than Amamiya, still follows the President around, sometimes forcefully.",
+      "The story picks up when Hinata sees a shooting star, so he starts going to where it landed. Along the way, he meets up with Amamiya, stating that is wasn't a meteor, but a UFO.",
+      "Based on the Visual Novel, Himawari by Blank note"
+    ],
+    "author": "Hiyama Daisuke",
+    "licensed": false
+  },
+  "Kekkon Yubiwa Monogatari": {
+    "cover": ["./img/cover/kek/1.jpg"],
+    "synopsis": [
+      "Satou has been in love with his childhood friend and neighbour, Hime, ever since she and her grandfather appeared out of nowhere 10 years ago. Now a dazzling, yet mysterious high-school beauty, she makes it more and more difficult for him to confess his feelings. As the anniversary of their first meeting is nearing, will he muster up his courage to transform their friendship into something more? Or will an entirely different fate await this tightly bonded pair?"
+    ],
+    "author": "Maybe",
+    "licensed": "Crunchyroll, Yen Press"
+  },
+  "Gonensei": {
+    "cover": ["./img/cover/gon/1.jpg"],
+    "synopsis": [
+      "Akio and Yoshino believed all there was left for them was to graduate. But life had different plans for them.",
+      "Yoshino moves on while Akio stays behind, and something between them begins to change.",
+      "The story of their youth continues."
+    ],
+    "author": "Kio Shimoku",
+    "licensed": false
+  },
+  "Hitogatana": {
+    "cover": ["./img/cover/hito/1.jpg"],
+    "synopsis": [
+      "Crimes commited using manned combat-androids dubbed \"Katana\" run rampant.",
+      "In an effort to maintain order, the government has organized the AKCD - \"Anti Katana Crime Division.\"",
+      "Togusa of the 8th squad of the AKCD, while holding existential doubts as a Human-Katana hybrid, continually casts himself into battle..."
+    ],
+    "author": "Onigunsou",
+    "licensed": false
+  },
+  "Yume Midokoro (oneshot)": {
+    "cover": ["./img/cover/mido/1.jpg"],
+    "synopsis": [
+      "By the same mangaka of Nyoron Churuya-san:",
+      "Yume Midokoro is the tale of a girl whose dreams suddenly become semi-reality, as she meets a clone of herself from her dreams"
+    ],
+    "author": "Eretto",
+    "licensed": false
+  },
+  "Ga-rei": {
+    "cover": ["./img/cover/ga/1.jpg"],
+    "synopsis": [
+      "While many of us would probably scream at even the thought of a ghost being near us, Freshman Nimura Kensuke just thinks of it as a common everyday thing, seeing as how he has the uncanny ability to see so many of them on a daily basis. Things soon heat up for him when he meets a girl who changes his life from then on. Her name’s Kagura, and she has the power to summon a mighty “spirit devourer”--otherwise known as a “Ga-rei”--called Byakuei. So, what’s Nimura to do? Chase down the evil spirits and have Kagura summon the Ga-rei to devour them, of course! Now, come feast on their adventures like some ravenous Ga-rei!"
+    ],
+    "author": "Segawa Hajime",
+    "licensed": "Kadokawa BookWalker"
+  },
+  "Hakoiri Drops": {
+    "cover": ["./img/cover/hak/1.jpg"],
+    "synopsis": [
+      "Kasugai Yoichi just entered high school and started living on his own. But his new next-door neighbor, Nishimori Shizuku, is the ultimate sheltered girl. The smallest ordinary thing is new to Shizuku, who grew up never leaving her house. Naturally, there's no way he could leave such a cute girl alone!"
+    ],
+    "author": "Tsurusaki Yuu",
+    "licensed": false
+  },
+  "Straw": {
+    "cover": ["./img/cover/straw/1.jpg"],
+    "synopsis": [
+      "Follow the story of a boy trying to fly and a girl trying to rebuild a tower.",
+      "Together, they traverse a post-apocalyptic world."
+    ],
+    "author": "Houden Eizou",
+    "licensed": false
+  },
+  "Paradox Blue": {
+    "cover": ["./img/cover/para/1.jpg"],
+    "synopsis": [
+      "\"What is the boundary between game and reality?\"",
+      "The world is in danger. Strange juggernauts called \"Angels\" have started to appear all around the planet, presenting riddles called \"Paradoxes\" to whoever happens to be in the near vicinity. Answer right and your land will receive God\\'s blessing. However, if you fail to solve the paradox be prepared to receive divine punishment..."
+    ],
+    "author": "Nakanishi Tatsurou/Nini",
+    "licensed": false
+  },
+  "OA": {
+    "cover": ["./img/cover/oa/1.jpg"],
+    "synopsis": [
+      "Horiuchi Yutaka-san is a popular idol, who isn't as glamorous and happy as her fans may think. Naturally, her next steps include a radio show, but one she isn't all too keen on doing. Although she tries her best to keep up her image, things quickly turn problematic. As she soon finds out, her voice is not hers alone."
+    ],
+    "author": "Watarai Keiji",
+    "licensed": false
+  },
+  "Nonscale": {
+    "cover": ["./img/cover/non/1.jpg"],
+    "synopsis": ["A collection of original short stories by the artist Mebae."],
+    "author": "Mebae",
+    "licensed": false
+  },
+  "Nejimakiboshi to Aoi Sora": {
+    "cover": ["./img/cover/neji/1.jpg"],
+    "synopsis": [
+      "This is the tale of a boy whose mother was killed in a meteor strike on their island home 6 months ago – something everyone knows was the crashing of an alien ship but no one will confirm – who one day quite literally has a girl drop out of the sky on him. She at first takes him hostage from people hunting her but it eventually comes out that she’s from outer space and if there’s one thing that this boy’s mother taught him, it is to NOT leave a damsel in distress…"
+    ],
+    "author": "Tokiya Seigo",
+    "licensed": false
+  },
+  "Tetsugaku Letra": {
+    "cover": ["./img/cover/let/1.jpg"],
+    "synopsis": [
+      "In middle school, Ichinose Kimitaka taught his friends how to play basketball. Despite his experience with the sport, his friends quickly outmatched him in skill. After an incident brought on by his frustration and jealousy, he was crushed to overhear those same 'friends' discussing how they wished he'd just kill himself.",
+      "On his way to toss out his special basketball shoes, he met a girl who was just as frustrated, throwing her own dancing shoes away. She was so tall, and her hands and feet are so large, that she had been rejected from her chosen hobby of Spanish dancing. He urged her to give basketball a try, and the two exchanged their shoes instead of throwing them away.",
+      "As he enters high school, Kimitaka learns that meeting him changed that girl's life for the better, and she is now a happy, social basketball player. Will Kimitaka be able to find the courage to make new friends and pursue his own talents?"
+    ],
+    "author": "Sahara Mizu",
+    "licensed": false
+  },
+  "Tokyo ESP": {
+    "cover": ["./img/cover/esp/1.jpg"],
+    "synopsis": [
+      "There’s a New Heroine in Town.",
+      "Rinka Urushiba’s world is turned upside down when she wakes up one day-after falling right through the floor.",
+      "Encouraged by another ESPer who believes that Rinka’s destiny is to become a hero of justice, she soon learns to use her powers for good. And not a moment too soon, as those with less-than-admirable ambitions descend on Tokyo with their own sets of superpowers. As the mysterious glowing fish flitting through the city skies gift powers seemingly at random, foes become friends and alliances are made and broken.",
+      "And what about that flying penguin?"
+    ],
+    "author": "Segawa Hajime",
+    "licensed": "Vertical"
+  },
+  "Taiyou no Ie": {
+    "cover": ["./img/cover/tai/1.jpg"],
+    "synopsis": [
+      "“Back in the day, that place was a house filled with magic—a place where you ended up smiling even if you were crying. Surely, an invisible wizard must have lived there. Or so I thought.”",
+      "What’s a young child to do when her mother leaves her father for another man? Or when her father remarries a woman who brings along a child from a previous marriage? Or when her childhood neighbor friend invites her to live with him?"
+    ],
+    "author": "Taamo",
+    "licensed": "Kodansha"
+  },
+  "Mardock Scramble": {
+    "cover": ["./img/cover/mar/1.jpg"],
+    "synopsis": [
+      "Why me? It was to be the last thought a young prostitute, Rune Balot, would ever have... as a human anyway. Taken in by a devious gambler named Shell, she became a slave to his cruel desires and would have been killed by his hand if not for a private investigator and his self-aware Universal Tool, Œufcoque. Now a cyborg, Balot has not only physical powers, but the ability to disrupt social environments. She chases after Shell, his partner-in-crime Boiled, and faces down a variety of insane villains in this pulse-pounding cyberpunk noir adventure."
+    ],
+    "author": "Ubukuta Tow/Oima Yoshitoki",
+    "licensed": "Kodansha"
+  },
+  "Yume Tsukai": {
+    "cover": ["./img/cover/yum/1.jpg"],
+    "synopsis": [
+      "An ordinary, quiet town is shaken by a series of bizarre happenings brought about by the darkness in human hearts. There are no solutions in the real world: Only \"Dream Messengers\" can find the answers.",
+      "Dream messengers connect the fabulous with the real and control the power of dreams. Their leader, Toko Mishima, works with 8 other messengers using the powers given by an old spell and a toy made by Toko's father. Toko, her younger sister Rinko, Hajime Tachibana, who loves young girls, and the six other Dream Messengers are given the names of days or stars - Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Raff, and Keito."
+    ],
+    "author": "Ueshiba Riichi",
+    "licensed": false
+  },
+  "Oh, my sweet alien!": {
+    "cover": ["./img/cover/ali/1.jpg"],
+    "synopsis": ["A man marries an alien. Wackiness ensues."],
+    "author": "Miyata Kouji",
+    "licensed": false
+  },
+  "Amaama to Inazuma": {
+    "cover": ["./img/cover/ama/1.jpg"],
+    "synopsis": [
+      "Inuzuka is a teacher who has been caring on his own for his little daughter, Tsumugi, since his wife's death. He's no good at cooking, so they've been eating packaged meals from the convenience vendor. A series of events lead him one evening to a restaurant run by the mother of one of his students, Kotori. Her mother isn't there, but Kotori does her best to feed them both. It turns out that Kotori is often alone, since her parents are divorced and her mother is frequently not around. The three of them begin to meet and cook tasty food together."
+    ],
+    "author": "Amagakure Gido",
+    "licensed": "Kodansha Comics"
+  },
+  "Ashita wa Kyouso-sama (oneshot)": {
+    "cover": ["./img/cover/kyou/1.jpg"],
+    "synopsis": ["The hijinks of the Society for the Discovery of the Truth of Occult Phenomena."],
+    "author": "Kio Shimoku",
+    "licensed": false
+  },
+  "Flying Witch (oneshot)": {
+    "cover": ["./img/cover/fly/1.jpg"],
+    "synopsis": [
+      "Kowata Makoto is an airhead with a bad sense of direction who just moved into her relative's house... but is that all?",
+      "The Oneshot was originally published under a different pen name (Ishioka Chikai)."
+    ],
+    "author": "Ishizuka Chihiro",
+    "licensed": false
+  },
+  "Futari no Renai Shoka": {
+    "cover": ["./img/cover/fut/1.jpg"],
+    "synopsis": [
+      "Kanako is a young woman who is running an old book vendor. One day, a customer comes in who shares her taste in books. He's a teenager named Akio, and he and Kanako quickly find that their taste in books is only the first of many ways that they fit together well. Kanako immediately realizes she wants him, and soon blurts out awkward things, like proposals of marriage and cohabitation. Despite their different ages and their awkwardness, it seems like their relationship has the potential to grow into something beautiful."
+    ],
+    "author": "Yamazaki Kore",
+    "licensed": false
+  },
+  "Gingitsune": {
+    "cover": ["./img/cover/gin/1.jpg"],
+    "synopsis": [
+      "When her mother passed away at a young age, Saeki Makoto was given the power to see Gintaro, one of the gods’ agents that have been protecting the small Inari temple since the Edo era. As only one person of the family can see the fox spirit, Gintaro, naturally as the only blood relative, when her mother passed on, Makoto inherited the sole power to talk to and see him. Although they have their differences, Makoto, with the help of Gintaro’s power, help the people of their community deal and solve their problems."
+    ],
+    "author": "Ochiai Sayori",
+    "licensed": false
+  },
+  "Hero Mask": {
+    "cover": ["./img/cover/hero/1.jpg"],
+    "synopsis": [
+      "Shibuya Mirai is stuck in a world where heroes seem to no longer exist. Already on his first day at a new school, he's targeted by a group of delinquents. Right as his situation seems hopeless, a real hero finally appears before his very eyes."
+    ],
+    "author": "Okabe Takashi/Tsuru Yumika",
+    "licensed": false
+  },
+  "Jigokuren - LOVE in the HELL": {
+    "cover": ["./img/cover/jigo/1.jpg"],
+    "synopsis": [
+      "Senkawa Rintaro: a regualr guy in his mid-20's who got a bit tipsy one night and fell to his death. But that is just the beginning of Rintaro's story, as he finds himself unexpectedly in Hell where he meets his guide, the painfully sexy devil Koyori. Can Rintaro take his situation seriously enough to repent for the sins of his former life, or is he fated to eternally tempted, teased, and tortured by scantily-clad devils with iron spiked clubs?"
+    ],
+    "author": "Suzumaru Reiji",
+    "licensed": "Seven Seas"
+  },
+  "18 Rin": {
+    "cover": ["./img/cover/rin/1.jpg"],
+    "synopsis": [
+      "Follows the story of Rinko Ikeuchi, the daughter of wealthy parents who's on the fast track to enter medical school, but when her family falls on hard times Rinko is forced to take a job, any job, to make ends meet. When the handsome Sawakura shows up offering Rinko gainful employment she can't really say no, even after she realizes that it involves working as a production assistant in the world of hardcore adult videos."
+    ],
+    "author": "",
+    "licensed": false
+  },
+  "Katsute Kami Datta Kemonotachi e": {
+    "cover": ["./img/cover/katsu/1.jpg"],
+    "synopsis": [
+      "In war, men become beasts. War makes gods out of beasts. When war ends... where do the gods go? Where can they rest their weary heads?",
+      "Wolves walk the forest of despair, the wasteland of lamentation, the sea of bitterness, in the time of dark and light. To kill those that were once their friends."
+    ],
+    "author": "Maybe",
+    "licensed": "Vertical"
+  },
+  "Sore ga Kanojo no Seigi nara": {
+    "cover": ["./img/cover/seigi/1.jpg"],
+    "synopsis": [
+      "After his happy-go-lucky lovestruck parents suddenly decide to go on an amorous traveling adventure, Yuki is shuffled off to live with one of his dad's old friends. He knows very little about his new living circumstances, save that his dad's friend is an author with three children.",
+      "Something seems a little off about the girl who's sent to meet him, the fidgety and overly anxious Aya, but he doesn't fully understand what's going on until he arrives at the house. Yuki, who has had very little to do with women thus far in his life, is now set to live in a house with four of them. The head of the house is actually an author of erotic novels, and she habitually forces her three daughters into embarrassing sexual situations. How will Yuki cope with his new life?"
+    ],
+    "author": "Sanada Rin",
+    "licensed": false
+  }
+}

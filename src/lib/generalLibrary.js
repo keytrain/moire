@@ -1,19 +1,20 @@
 export default {
-  howLongAgo: function(dateObj) {
+  howLongAgo: function (dateObj) {
     const today = new Date(),
-    tYear = today.getFullYear(),
-    tMonth = today.getMonth() + 1,
-    tDay = today.getDate() + 1,
-    tHour = today.getHours(),
-    tMin = today.getMinutes(),
-    tSec = today.getSeconds(),
-    rYear = dateObj.getFullYear(),
-    rMonth = dateObj.getMonth() + 1,
-    rDay = dateObj.getDate() + 1,
-    rHour = dateObj.getHours(),
-    rMin = dateObj.getMinutes(),
-    rSec = dateObj.getSeconds();
-    
+      date = new Date(dateObj),
+      tYear = today.getFullYear(),
+      tMonth = today.getMonth() + 1,
+      tDay = today.getDate() + 1,
+      tHour = today.getHours(),
+      tMin = today.getMinutes(),
+      tSec = today.getSeconds(),
+      rYear = date.getFullYear(),
+      rMonth = date.getMonth() + 1,
+      rDay = date.getDate() + 1,
+      rHour = date.getHours(),
+      rMin = date.getMinutes(),
+      rSec = date.getSeconds();
+
     let yDiff = tYear - rYear;
     let moDiff = tMonth - rMonth;
     let dDiff = tDay - rDay;
@@ -29,42 +30,42 @@ export default {
     if (yDiff > 0) {
       // different year but within 12 months
       if (yDiff === 1 && moDiff < 0) {
-        return (moDiff + 12) + 'mo';
+        return moDiff + 12 + "mo";
       } else {
-        return yDiff + 'y';
+        return yDiff + "y";
       }
     } else if (moDiff > 0) {
       // different month but within 30 days
       if (moDiff === 1 && dDiff < 0) {
-        return (dDiff + 30) + 'd';
+        return dDiff + 30 + "d";
       }
-      return moDiff + 'mo';
+      return moDiff + "mo";
     } else if (dDiff > 0) {
       if (dDiff === 1 && hDiff < 0) {
-        return (hDiff + 24) + 'h';
+        return hDiff + 24 + "h";
       }
-      return dDiff + 'd';
+      return dDiff + "d";
     } else if (hDiff > 0) {
       if (hDiff === 1 && mDiff < 0) {
-        return (mDiff + 60) + 'm';
+        return mDiff + 60 + "m";
       }
-      return hDiff + 'h';
+      return hDiff + "h";
     } else if (mDiff > 0) {
       if (mDiff === 1 && sDiff < 0) {
-        return (sDiff + 60) + 's';
+        return sDiff + 60 + "s";
       }
-      return mDiff + 'm';
+      return mDiff + "m";
     } else if (sDiff > 0) {
-      return sDiff + 's';
+      return sDiff + "s";
     }
-    return 'Error';
+    return "Error";
   },
 
-  padZero: function(input) {
+  padZero: function (input) {
     let num = input;
     while (num.length < 3) {
-      num = '0' + num;
+      num = "0" + num;
     }
     return num;
-  }
-}
+  },
+};

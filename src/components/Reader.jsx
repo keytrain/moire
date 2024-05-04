@@ -9,6 +9,7 @@ import genLib from "../lib/generalLibrary";
 import Page from "./Page";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
+import cData from "../data/chapterData";
 
 import "./Reader.css";
 
@@ -37,7 +38,6 @@ class Reader extends React.Component {
 
     this.selection = this.props.match.params.series;
     this.chapter = this.props.match.params.chapter;
-    this.cData = window.chapterData;
 
     this.state = {
       pageMode: localStorage.getItem("pageMode") ? localStorage.getItem("pageMode") : "Double Page",
@@ -51,8 +51,8 @@ class Reader extends React.Component {
       rightShow: false,
       spread: false,
       goBack: false,
-      lastPg: this.cData.series[this.selection][this.chapter].pgCount
-        ? this.cData.series[this.selection][this.chapter].pgCount + 1
+      lastPg: cData[this.selection][this.chapter].pgCount
+        ? cData[this.selection][this.chapter].pgCount + 1
         : 1000,
       showDisqus: false,
       showInfo: false,
@@ -106,9 +106,7 @@ class Reader extends React.Component {
   }
 
   render() {
-    let chapterObj = this.cData.series[this.selection]
-      ? this.cData.series[this.selection][this.chapter]
-      : {};
+    let chapterObj = cData[this.selection] ? cData[this.selection][this.chapter] : {};
     let currPg = this.props.match.params.page;
 
     let actionIconSize = this.state.windowWidth > MOBILE ? 24 : 18;
@@ -328,9 +326,7 @@ class Reader extends React.Component {
   };
 
   buffer = (size) => {
-    let chapterObj = this.cData.series[this.selection]
-      ? this.cData.series[this.selection][this.chapter]
-      : {};
+    let chapterObj = cData[this.selection] ? cData[this.selection][this.chapter] : {};
     let startPg = Number(this.state.leftPgCount);
     let errorCount = 0;
     for (let i = 0; i < size; i++) {

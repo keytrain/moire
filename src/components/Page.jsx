@@ -24,7 +24,7 @@ function Page({
           clearInterval(checkSpread);
         } else if (imgRef.current.naturalWidth !== 0 || imgRef.current.complete) {
           // naturalWidth is 0 when image metadata hasn't loaded yet
-          if (imgRef.current.naturalWidth > 1300) {
+          if (imgRef.current.naturalWidth > 1700) {
             spread({ spread: true, width: imgRef.current.naturalWidth });
           } else {
             spread({ spread: false, width: imgRef.current.naturalWidth });

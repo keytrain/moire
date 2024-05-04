@@ -4,32 +4,30 @@
   "private": true,
   "homepage": "https://maigo.moe",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "react-scripts build && rm -rf ./production/precache-manifest* ./production/data ./production/static ./production/img && mv ./build/* ./production",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "bunx vite",
+    "build": "vite build",
+    "deploy": "vite build && rm -rf ./production/img ./production/assets && mv ./build/* ./production",
+    "preview": "vite preview",
+    "analyze": "bunx vite-bundle-visualizer"
   },
   "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "bun-types": "latest",
+    "postcss-nesting": "^12.0.1",
+    "react": "latest",
+    "react-dom": "latest",
     "react-icons": "^2.2.5",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "^5.0.0",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "latest",
+    "vite": "^4.4.9"
   },
-  "dependencies": {},
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "browserslist": [
+    "defaults"
+  ],
+  "module": "./src/index.jsx",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
